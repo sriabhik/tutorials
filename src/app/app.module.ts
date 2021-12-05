@@ -1,20 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-
-import { EmployeesComponent } from './employees/employees.component';
-import { EmployessListComponent } from './employess-list/employess-list.component';
-
-
+import { EmployeesModule } from './employees/employees.module';
+import { SharedModule } from './employees/shared/shared.module';
 @NgModule({
   declarations: [
-    AppComponent,
-   // EmployeesListComponent,
-    EmployeesComponent,
-   EmployessListComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    EmployeesModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

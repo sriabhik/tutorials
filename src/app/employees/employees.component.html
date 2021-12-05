@@ -1,2 +1,3 @@
 
-<h1>employees component works</h1>
+<h1 *ngIf = "people.length">{{title}}</h1>
+<app-employees-list [employees]= "people"></app-employees-list>

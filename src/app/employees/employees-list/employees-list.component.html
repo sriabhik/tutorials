@@ -1,0 +1,36 @@
+<br/>
+<search-textBox></search-textBox>
+<br />
+<br />
+<table class = "table table-hover">
+    <thead>
+        <th>Name</th>
+        <th>From</th>
+     
+        <th>Experience</th>
+    </thead>
+    <tr  *ngFor = "let emp of filteredEmployees">
+
+        <td>
+            <a>
+                {{emp.name}}
+            </a>
+        </td>
+             {{emp.city}}
+        <td>
+                {{emp.exp}}
+        </td>
+
+    </tr>
+<tr *ngIf = "filteredEmployees && filteredEmployees.length">
+    <td colspan="2">&nbsp;</td>
+    <td>
+        Number Of Employee : {{filteredEmployees.length}}
+    </td>
+</tr> 
+<tr *ngIf = "!filteredEmployees || !filteredEmployees.length">
+    <td colspan="4">No employee</td>
+</tr >
+    
+</table>
+<br />
