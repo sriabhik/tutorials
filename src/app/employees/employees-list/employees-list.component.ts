@@ -29,5 +29,14 @@ export class EmployeesListComponent implements OnInit {
       { id:4,name:'iamneo4',city:'Bengalaru',exp:11,joined:new Date(2014,12,16)}
     ]*/
   }
+  filter(data :string){
+    if(data){
+      this.filteredEmployees = this.employees.filter((emp:IEmployee)=>{
+        return emp.name.toLowerCase().indexOf(data.toLowerCase()) > -1 ||
+                emp.city.toLowerCase().indexOf(data.toLowerCase()) >  -1
+      });
+    }else
+        this.filteredEmployees = this.employees;
+  }
 
 }
