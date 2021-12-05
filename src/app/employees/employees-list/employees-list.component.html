@@ -4,6 +4,7 @@
 <br />
 <table class = "table table-hover">
     <thead>
+        <th>ID</th>
         <th>Name</th>
         <th>From</th>
      
@@ -11,12 +12,11 @@
     </thead>
     <tr  *ngFor = "let emp of filteredEmployees">
 
-        <td>
-            <a>
-                {{emp.name}}
-            </a>
+        <td>{{emp.id}}</td>
+        <td>           
+           <a>  {{emp.name | uppercase}}</a>  
         </td>
-             {{emp.city}}
+             {{emp.city  | uppercase}}
         <td>
                 {{emp.exp}}
         </td>
